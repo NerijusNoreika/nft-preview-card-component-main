@@ -1,0 +1,180 @@
+$darkBlueCard: hsl(216, 50%, 16%);
+$darkBlueBackground: hsl(217, 54%, 11%);
+$darkBlueBackgroundShadow: hsl(217, 55%, 10%);
+$darkBlueBackgroundShadowSecond: hsl(217, 55%, 12%);
+$veryDarkBlueLine: hsl(215, 32%, 27%);
+$softBlue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$white: hsl(0, 0%, 100%);
+
+$fontSizeParagraph: 18px;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: 'Outfit', sans-serif;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: $darkBlueBackground;
+  font-size: $fontSizeParagraph;
+}
+
+.container {
+  display: block;
+  flex-direction: column;
+  max-width: 350px;
+  padding: 25px;
+  border-radius: 15px;
+  background: $darkBlueCard;
+  color: $white;
+  box-shadow: 0 0 20px 15px $darkBlueBackgroundShadow,
+              0 0 20px 30px $darkBlueBackgroundShadowSecond;
+}
+
+
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  &:hover {
+    color: $cyan;
+    cursor: pointer;
+  }
+}
+
+.image-container {
+  position: relative;
+}
+.title-image {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  display: block;
+  z-index: 0;
+}
+
+.image-container:hover {
+    cursor: pointer;
+}
+
+.image-container:hover .image-overlay, .image-container:hover .eye {
+    visibility: visible;
+  }
+
+
+.image-overlay {
+    opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  content: '';
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: $cyan;
+  z-index: 1;
+}
+
+.image-container .eye {
+    position: absolute;
+    visibility: hidden;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+
+
+.main-text {
+  line-height: 1.5;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+.coin,
+.time {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.weight-400 {
+  font-weight: 400;
+}
+
+.weight-300 {
+  font-weight: 300;
+}
+.weight-600 {
+  font-weight: 600;
+}
+
+.coin {
+  color: $cyan;
+  margin-right: auto;
+}
+
+.time {
+  color: $softBlue;
+  margin-left: auto;
+}
+
+.coin span,
+.time span {
+  margin-left: 8px;
+}
+
+.softblue {
+  color: $softBlue;
+}
+
+.img-responsive {
+  display: block;
+  width: 100%;
+}
+
+hr {
+  border-color: $veryDarkBlueLine;
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 300;
+  padding: 8px 0;
+  img {
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+
+  .attribution {
+    font-size: 16px;
+    margin-left: 16px;
+    &:hover {
+      color: $cyan;
+      cursor: pointer;
+    }
+  }
+}
