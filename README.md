@@ -27,5 +27,5 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link](https://your-solution-url.com)
-- Live Site URL: [Link](https://your-live-site-url.com)
+- Solution URL: [Link](https://github.com/NerijusNoreika/nft-preview-card-component-main)
+- Live Site URL: [Link](https://nerijusnoreika.github.io/nft-preview-card-component-main/)
