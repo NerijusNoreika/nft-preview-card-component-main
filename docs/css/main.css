@@ -20,6 +20,7 @@ body {
 }
 
 .container {
+  margin: 0 10px;
   display: block;
   flex-direction: column;
   max-width: 350px;
